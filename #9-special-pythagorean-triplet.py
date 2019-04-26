@@ -9,4 +9,4 @@ def pyth(a,b):
         
 for i in range(1,1000):
     for j in range(999,1,-1):
-        f = pyth(i,j);
+        pyth(i,j);
