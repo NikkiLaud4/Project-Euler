@@ -53,8 +53,13 @@ def diagonal():
         for j in range(17):
             prod=arr[i][j]*arr[i+1][j+1]*arr[i+2][j+2]*arr[i+3][j+3]
             if prod>max_prod:
-                print(prod,"**",max_prod,"Numbers:",arr[i][j],arr[i+1][j+1],arr[i+2][j+2],arr[i+3][j+3])
-                max_prod=prod
+                  print(prod,"**",max_prod,"Numbers:",arr[i][j],arr[i+1][j+1],arr[i+2][j+2],arr[i+3][j+3])
+                  max_prod=prod
+            if i>3:
+              prod=arr[i][j]*arr[i-1][j+1]*arr[i-2][j+2]*arr[i-3][j+3]
+              if prod>max_prod:
+                  print(prod,"**",max_prod,"Numbers:",arr[i][j],arr[i+1][j+1],arr[i+2][j+2],arr[i+3][j+3])
+                  max_prod=prod
     print("Diagonal End")
     return max_prod
 
@@ -62,4 +67,4 @@ sol=[]
 sol+=[horizondal()]
 sol+=[vertical()]
 sol+=[diagonal()]
-print(max(sol))
+print("Maximum:",max(sol))
